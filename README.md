@@ -3,10 +3,13 @@ To build:
 - install docker on system (https://docs.docker.com/engine/install/)
 - opon terminal window
 - cd <DOWNLOADED_GIT_REPO_DIRECTORY>:
+- add data to folder 'data'
 - docker build command (this will build an image with all files and dependencies):
-    > docker build -t <pipeline-app-name>:<v#> .
+    > "docker build -t <pipeline-app-name>:<v#> ."
 - docker run command:
-    > docker run <pipeline-app-name>:<v#>
+    > "docker run <pipeline-app-name>:<v#>"
+- find .jsonl cleaned ouput in image 'result' folder
+- find cleaning reports for all chunks in result/report<yyyymmdd> 
 
 ## FILES
 - DockerFile - run in docker to initiate a container.
@@ -81,4 +84,5 @@ If input is chunks:
 from clean_text import Cleaner, clean_chunk
 proc = Cleaner()
 clean_chunk(pd.DataFrame,proc.cfg)
+
 
